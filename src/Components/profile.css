@@ -1,0 +1,69 @@
+.img{
+    display: flex;
+    border: 2px solid black;
+    color: white;
+    justify-content: space-between;
+    padding: 9.7%;
+}
+.profile-mid{
+    border-radius: 50%;
+    width: 30%;
+}
+.imgprofile{
+    border-radius: 50%;
+}
+.border-profile{
+    margin-left: 27.2%;
+    position: absolute;
+    width: 24%;
+    height: 50%;
+    border-radius: 50%  ;
+    border: 10px dotted rgb(11, 223, 223);
+    animation: spin 20s infinite;
+}
+.profile-left{
+    font-size: 500%;
+    font-weight: bold;
+}
+.skills-list{
+    display: grid;
+    gap: 35px;
+    grid-template-columns: 1fr 1fr;
+}
+.skills-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 34px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 2%;
+    padding-right: 50px;
+}
+.toggleaboutme{
+
+}
+.skills-text:hover{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 34px;
+    border: 2px solid green;
+    border-radius: 10px;
+    padding: 2%;
+    padding-right: 50px;
+    color: skyblue;
+}
+.toggleaboutme .active{
+
+}
+.ReactIcon:hover{
+    animation: spin 4s infinite;
+}
+
+@keyframes spin{
+    50% {transform: rotate(180deg);}
+}
+@keyframes flipx{
+
+}
