@@ -40,9 +40,6 @@
     padding: 2%;
     padding-right: 50px;
 }
-.toggleaboutme{
-
-}
 .skills-text:hover{
     display: flex;
     justify-content: space-between;
@@ -53,9 +50,6 @@
     padding: 2%;
     padding-right: 50px;
     color: skyblue;
-}
-.toggleaboutme .active{
-
 }
 .ReactIcon:hover{
     animation: spin 4s infinite;
