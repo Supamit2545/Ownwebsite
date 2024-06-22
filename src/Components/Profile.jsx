@@ -48,7 +48,7 @@ const Profile = () => {
 
                 img.classList.add('active');
                 element.classList.add('active');
-                aboutme.textContent = "Closed Profile!";
+                aboutme.textContent = "Close Profile!";
                 profileLeft.classList.add('hidden')
             }
             console.log("No Error")
