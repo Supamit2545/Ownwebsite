@@ -11,6 +11,7 @@ function Topbar() {
                 <button className='hover:text-gray-500'>Profile</button>
                 <button className='hover:text-gray-500'>Projects</button>
                 <button className='hover:text-gray-500'>Certifications</button>
+                <button className='hover:text-gray-500'>Services</button> 
                 <button className='border-2 border-black  rounded-3xl px-2 bg-purple-500 py-1 hover:text-green-500'>Dark Mode</button>
             </ul>
         </div>

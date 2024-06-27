@@ -1,9 +1,9 @@
 .img{
     display: flex;
-    border: 2px solid black;
     color: white;
     justify-content: space-between;
     padding: 9.7%;
+    margin-top: -5%;
 }
 .profile-mid{
     border-radius: 50%;
@@ -11,6 +11,10 @@
 }
 .imgprofile{
     border-radius: 50%;
+}
+.imgprofile img{
+    border-radius: 50%;
+    box-shadow: 0 0 25px var( --main-color);
 }
 .imgprofile.active{
     animation: Move 2s forwards;
@@ -49,31 +53,52 @@
 .skills-list{
     display: grid;
     gap: 35px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 250px 150px 150px;
 }
 .skills-text{
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
+    justify-content: center;
     align-items: center;
-    font-size: 34px;
-    border: 2px solid white;
+    font-size: 24px;
+    border: 2px solid rgb(49, 89, 109);
     border-radius: 10px;
-    padding: 2%;
-    padding-right: 50px;
 }
 .skills-text:hover{
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
+    justify-content: center;
     align-items: center;
-    font-size: 34px;
-    border: 2px solid green;
+    font-size: 24px;
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 10px;
-    padding: 2%;
-    padding-right: 50px;
     color: skyblue;
 }
 .ReactIcon:hover{
     animation: spin 4s infinite;
+}
+
+.content{
+    display: none;
+}
+.content.active{
+    display: block;
+    animation: fadeIn 1s forwards;
+}
+.Cbox{
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.content-text{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-left: 5%;
+    text-align: center;
+    animation: fadeIn 2s forwards;
 }
 
 .modal.active {
@@ -85,8 +110,8 @@
     display: flex;
     justify-content: center;
     border-radius: 20px;
-    margin-left: 30%;
-    margin-top: -8%;
+    margin-left: 40%;
+    margin-top: 8%;
     animation: fadeIn 2s forwards;
 }
 .modal.hidden{
@@ -105,7 +130,7 @@
 
 @keyframes Move{
     to{
-        transform: translate(-17vw) scale(1.2);
+        transform: translateX(-15vw) translateY(-1vw) scale(1.2);
     }
 }
 
