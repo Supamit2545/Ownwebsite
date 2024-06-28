@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './project.css'
+import '../assets/Style/project.css'
 import demo from "../assets/img/demo.jpg"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

@@ -32,7 +32,7 @@ import git from '../assets/img/tools/git.png'
 import github from '../assets/img/tools/github.png'
 import postman from '../assets/img/tools/postman.png'
 import vscode from '../assets/img/tools/vscode.png'
-import './profile.css'
+import '../assets/Style/profile.css'
 
 const Profile = () => {
     function profileactive(err) {

@@ -1,0 +1,66 @@
+.cer-box{
+    height: 500px;
+}
+.cer-con{
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 2%;
+}
+.certi{
+    border: 1px solid gray;
+    border-radius: 20px;
+    box-shadow: 0 0 20px;
+    position: relative;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.cer-img{
+    width: 500px;
+    border-radius: 20px;
+    position: relative;
+}
+.certi:hover{
+    border: 2px solid gray;
+    border-radius: 20px;
+    box-shadow: 0 0 20px;
+    animation: projectshover 1s forwards;  
+}
+.cer-img:hover{
+    width: 500px;
+    border-radius: 20px;
+}
+.backspin{
+    width: 500px;
+    height: 100%;
+    padding: 100%;
+    margin-top: -50%;
+    margin-left: -20%;
+    position: absolute;
+    animation: backgroundspin 4s linear infinite;
+    background: linear-gradient(#00ccff, #d500f9);
+}
+
+@keyframes projectshover {
+    to{
+        transform: translateY(-10px)
+    }
+}
+
+@keyframes leftslide {
+    to{
+        transform: translateX(-40px);
+    }
+}
+
+@keyframes backgroundspin{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
