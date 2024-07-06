@@ -64,3 +64,11 @@
         transform: rotate(360deg);
     }
 }
+
+@media screen and (max-width: 500px) {
+    div.cer-con{
+        width: 90%;
+        margin-left: 0;
+        scrollbar-width: none;
+    }
+}

@@ -33,6 +33,7 @@ import github from '../assets/img/tools/github.png'
 import postman from '../assets/img/tools/postman.png'
 import vscode from '../assets/img/tools/vscode.png'
 import '../assets/Style/profile.css'
+import Typed from 'typed.js';
 
 const Profile = () => {
     function profileactive(err) {
@@ -88,7 +89,7 @@ const Profile = () => {
 
     const [aboutme, setAboutme] = useState(false)
     const [abouttoggle, setAbouttoggle] = useState(false)
-    const [activeTab, setActive] = useState()
+    const [activeTab, setActive] = useState(0)
     const [icon, setIcon] = useState()
 
     const handleActive = (id) => {
@@ -107,31 +108,53 @@ const Profile = () => {
         }
     }
 
+    const el = React.useRef(null);
+
+    React.useEffect(() => {
+        const typed = new Typed(el.current, {
+        strings: ['Website Developer', 'Editor','Freelancer','Youtuber'],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true,
+        });
+
+        return () => {
+        // Destroy Typed instance during cleanup to stop animation
+        typed.destroy();
+        };
+    }, []);
+
     return (
-        <div className='img'>
+        <div className='profile-containter'>
             <div id='profile-left' className='profile-left active'>
-                <div className=''>Hi There!</div>
-                <div className='text-4xl text-green-500'>I'm Website Developers</div>
-                <div className='text-2xl text-blue-500'>Front-End , Full-Stack</div>
-                <div className='flex gap-10 mt-5'>
-                    <div className='ReactIcon text-blue-500'><FaReact /></div>
-                    <div className='text-green-500'><FaNodeJs /></div>
-                    <div className='text-blue-500'><FaPython /></div>
-                </div>
-                <div>
-                    <div className='text-2xl mt-5 text-sky-500'>Social</div>
-                    <div className='flex gap-5'>
-                        <a href="https://www.youtube.com/channel/UCA8_mwwQQZJ0DLaMmUgewgQ"><button className='text-red-500 hover:text-red-700 mt-5'><FaYoutube /></button></a>
-                        <a href="https://github.com/Supamit2545"><button className='bg-white text-gray-900 rounded-full h-20 mt-5'><FaGithub /></button></a>
-                        <a href="https://www.facebook.com/profile.php?id=100018763508340"><button className='h-20 mt-5 text-blue-500 hover:text-blue-700 bg-white rounded-full'><FaFacebook /></button></a>
+                <div className='text-left'>
+                    <div className='text'>
+                        <div className=''>Hi There!</div>
+                        <div className='flex text-2xl'>
+                            <p className='mr-5 pb-5 text-2xl'>I'm : </p><span className=' text-2xl text-green-500' ref={el}></span>
+                        </div>
+                        <div className='text-2xl text-blue-500'>Front-End , Full-Stack</div>
+                        <div className='flex gap-10 mt-5'>
+                            <div className='ReactIcon text-blue-500'><FaReact /></div>
+                            <div className='text-green-500'><FaNodeJs /></div>
+                            <div className='text-blue-500'><FaPython /></div>
+                        </div>
+                    </div>
+                    <div className='social'>
+                        <div className='text-2xl mt-5 text-sky-500'>Social</div>
+                        <div className='flex gap-5'>
+                            <a href="https://www.youtube.com/channel/UCA8_mwwQQZJ0DLaMmUgewgQ"><button className='text-red-500 hover:text-red-700 mt-5'><FaYoutube /></button></a>
+                            <a href="https://github.com/Supamit2545"><button className='bg-white text-gray-900 rounded-full h-20 mt-5'><FaGithub /></button></a>
+                            <a href="https://www.facebook.com/profile.php?id=100018763508340"><button className='h-20 mt-5 text-blue-500 hover:text-blue-700 bg-white rounded-full'><FaFacebook /></button></a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div className='border-profile'></div>
-            <div className='profile-mid space-y-10'>
+            <div className='profile-mid space-y-5'>
                 <img id='profileimg' className='imgprofile' src={profile} alt="" />
-                <div className='flex'>
-                    <div><button id='Profilebtn' className='toggleaboutme' onClick={(e) => { profileactive(), toggleAboutme() }}><span id='aboutme'>Open Profile!</span></button></div>
+                <div className='pbtn'>
+                    <div className=''><button id='Profilebtn' className='toggleaboutme' onClick={(e) => { profileactive(), toggleAboutme() }}><span id='aboutme'>Open Profile!</span></button></div>
                 </div>
             </div>
             <div>
@@ -216,8 +239,8 @@ const Profile = () => {
                         </ul>
                     </div>
                 </div>
-                <div className='flex w-2/5 mx-auto my-5 gap-10'>
-                    <button className='skills-text px-5' >Resume<FaDownload className='text-green-500' /></button>
+                <div className='download-btn flex w-2/5 mx-auto my-5 gap-10'>
+                    <button className='skills-text px-3' >Resume<FaDownload className='text-green-500' /></button>
                     <button className='skills-text px-10' >CV<FaDownload className='text-green-500' /></button>
                 </div>
             </div>
@@ -229,21 +252,34 @@ const Profile = () => {
                             <div className='flex justify-between text-2xl'>
                                 <div>
                                     <h3>THAI</h3>
-                                    <p className='w-3/4 ml-5'>
+                                    <p className='w-6/7 pr-10 ml-5  border-r-2 border-black'>
                                         ผมกำลังสนใจด้านเว็บไซต์ที่สวยงามและใช้งานง่ายเริ่มต้นศึกษาตั้งเกี่ยวกับโปรแกรมตั้งแต่เข้าปวช.
                                         และเข้าเรียนมหาลัยในสาขา Computer Engineer แต่ไม่จบ เรียนได้ถึงปี 2 ครับ ภาษาที่ชอบที่สุดคือ Python ครับ
                                     </p>
-                                    <div>
-                                        <div>Other Skills.</div>
-                                        <div></div>
-                                    </div>
                                 </div>
                                 <div className='text-end'>
                                     <h4>ENG</h4>
-                                    <p className='w-3/4 ml-auto'>
+                                    <p className='w-4/4 ml-auto'>
                                         I am interested in websites that are beautiful and easy to use. I started studying about the program since entering my vocational certificate.
                                         And went to university in the field of Computer Engineer, but didn't graduate. I studied until year 2. My favorite language is Python.
                                     </p>
+                                </div>
+                            </div>
+                            <div className='my-4'>
+                                <div className='text-3xl font-bold '>Other Skills.</div>
+                            </div>
+                            <div className='other-skills flex justify-between'>
+                                <div className='oskills text-xl'>
+                                    <p>Flexibility and Adaptability</p>
+                                    <p>|⭐|⭐|⭐|⭐|⭐|</p>
+                                </div>
+                                <div className='oskills text-xl'>
+                                    <p>Creativity</p>
+                                    <p>|⭐|⭐|⭐|⭐|</p>
+                                </div>
+                                <div className='oskills text-xl'>
+                                    <p>Positive Attitude</p>
+                                    <p>|⭐|⭐|⭐|⭐|⭐|</p>
                                 </div>
                             </div>
                         </div>

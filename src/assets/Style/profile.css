@@ -1,13 +1,15 @@
-.img{
+.profile-containter{
     display: flex;
-    color: white;
+    color: rgb(255, 255, 255);
     justify-content: space-between;
     padding: 9.7%;
     margin-top: -5%;
+    z-index: 3;
 }
 .profile-mid{
     border-radius: 50%;
-    width: 30%;
+    width: 50%;
+    padding-right: 20px;
 }
 .imgprofile{
     border-radius: 50%;
@@ -17,6 +19,8 @@
     box-shadow: 0 0 25px var( --main-color);
 }
 .imgprofile.active{
+    margin-top: -35%;
+    top: 20%;
     animation: Move 2s forwards;
 }
 .imgprofile.closed{
@@ -35,6 +39,8 @@
     font-size: 500%;
     font-weight: bold;
     animation: fadeIn 5s;
+    padding-right: 10%;
+    left: 20px;
 }
 
 .toggleaboutme{
@@ -47,9 +53,11 @@
     font-weight: bold;
     margin-left:50px;
 }
+
 .toggleaboutme:hover{
     background-color: darkblue;
 }
+
 .skills-list{
     display: grid;
     gap: 35px;
@@ -86,7 +94,7 @@
     animation: fadeIn 1s forwards;
 }
 .Cbox{
-    background-color: rgba(255, 255, 255);
+    background:linear-gradient(#3205fb38 , #ffffff44);
     border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -106,20 +114,22 @@
     position: absolute;
     width: 55%;
     height: 70%;
-    background-color: rgba(255, 255, 255 ,1);
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     border-radius: 20px;
     margin-left: 40%;
     margin-top: 8%;
     animation: fadeIn 2s forwards;
-    
+    scrollbar-width: none;
 }
 .modal.hidden{
     animation: fadeOut 2s forwards;
 }
 .modal-content{
     color: black;
+    background: transparent;
+    padding: 5%;
 }
 
 @keyframes spin{
@@ -131,7 +141,7 @@
 
 @keyframes Move{
     to{
-        transform: translateX(-15vw) translateY(-1vw) scale(1.2);
+        transform: translateX(-13vw) translateY(2vw) scale(0.8);
     }
 }
 
@@ -143,8 +153,56 @@
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
-  }
+}
 @keyframes fadeOut {
     0% { opacity: 1; }
     100% { opacity: 0; }
-  }
+}
+
+@media screen and (max-width: 500px) {
+    div.profile-containter{
+        display: block;
+    }
+    div.profile-left .active{
+        display: flex;
+    }
+    div.modal.active{
+        overflow-y: auto;
+        scrollbar-width: none;
+        z-index: 0;
+        width: 100%;
+        margin-left: auto;
+        margin-top: 20%;
+        height: 60%;
+        
+    }
+    div.skills-list{
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+        justify-content: space-around;
+        padding-bottom: 5%;
+    }
+    div.download-btn{
+        width: auto;
+        margin-left: -2%;
+    }
+    div.profile-mid{
+        width: 365px;
+        z-index: 3;
+    }
+    .imgprofile.active{
+        margin-top: 140%;
+        transform: scale(0.8) translateX(18%);
+    }
+    .other-skills{
+        display: flex;
+        flex-direction: column;
+    }
+    .oskills{
+        display: flex;
+        justify-content: space-between;
+        width: 105%;
+    }
+    
+}

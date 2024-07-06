@@ -6,7 +6,8 @@
 .service-content{
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 50px;
+
 }
 .service-card{
     margin-top: 2%;
@@ -14,4 +15,16 @@
     padding: 1%;
     border-radius: 20px;
     font-size: 20px;
+}
+
+@media screen and (max-width: 500px) {
+   div.service-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+   }
+   div.service-card{
+    width: 90%;
+   }
 }
